@@ -1,0 +1,29 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="{{ '/static/style.css'|url }}">
+<title>{% block title %}Welcome{% endblock %} — Mountain Valley Cattle</title>
+<style>
+  body {
+    background-image: url("{{ '/static/img/boards.jpg'|url }}");
+  }
+</style>
+<body>
+  <header>
+    <h1>Mountain Valley Cattle</h1>
+    <nav>
+      <ul class="nav">
+        {% for project in site.get('/').children %}
+        <li{% if this == project %} class="active"{% endif %}>
+          <a href="{{ project|url }}">{{ project.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </header>
+  <div class="page">
+    {% block body %}{% endblock %}
+  </div>
+  <footer>
+    &copy; Copyright 2018 by Andrew Goldsmith.
+  </footer>
+</body>
