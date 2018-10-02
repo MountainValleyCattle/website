@@ -1,9 +1,7 @@
-title: Hello Website
+title: Something for Sale
 ---
 pub_date: 2018-08-13
 ---
 author: Andrew Goldsmith
 ---
-body:
-
-This is an example blog post.  Not much here but that's not the point :)
+body: This would be the description of the thing for sale

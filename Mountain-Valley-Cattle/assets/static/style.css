@@ -1,25 +1,39 @@
+/*
+ * Colors:
+ *  Light green (backgrounds) #E6EEE8
+ *  Darkest green             #00250A
+ *  Link blue:                #0A1A56
+ *  Lightest blue             #FDFDFD
+ */
 body {
     font-family: 'Verdana', sans-serif;
     margin: 50px 25px;
 }
 
 a {
-    color: #2a99b6;
+    color: #0A1A56;
 }
 
 a:hover {
+    /* what color TODO */
     color: #33bbdf;
+}
+
+.our-photo {
+  float: left !important;
+  margin-right: 1em;
+  text-align: center;
 }
 
 header, footer, div.page {
     width: 760px;
     margin: 0 auto;
-    background: #daeef3;
+    background: #E6EEE8;
     padding: 20px 30px;
 }
 
 header h1 {
-    color: #169bbd;
+    color: #00250A;
     margin: 0;
     font-weight: normal;
     font-size: 42px;
@@ -38,5 +52,5 @@ header nav ul li {
 }
 
 div.page {
-    background: #f1fbfe;
+    background: #FDFDFD;
 }

@@ -12,6 +12,9 @@
     <h1>Mountain Valley Cattle</h1>
     <nav>
       <ul class="nav">
+        <li{% if this == site.get('/') %} class="active"{% endif %}>
+          <a href="{{ site.get('/')|url }}">Home</a>
+        </li>
         {% for project in site.get('/').children %}
         <li{% if this == project %} class="active"{% endif %}>
           <a href="{{ project|url }}">{{ project.title }}</a>
@@ -21,6 +24,15 @@
     </nav>
   </header>
   <div class="page">
+    {% if this == site.get('/') %}
+    <div class="our-photo">
+      <img src="{{ '/static/img/andrew_and_hedwig_goldsmith.png'|asseturl }}">
+      <div class="name">Andrew and Hedwig Goldsmith</div>
+      <div class="location">Hackett, Arkansas</div>
+      <div><a class="email" href="mailto:aagold@cms-tx.us">Contact Us</a></div>
+      <div><a class="phone" href="tel:479-639-0164">479 - 639 - 0164</a></div>
+    </div>
+    {% endif %}
     {% block body %}{% endblock %}
   </div>
   <footer>
